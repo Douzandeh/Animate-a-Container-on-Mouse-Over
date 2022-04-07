@@ -1,0 +1,64 @@
+body{
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color:rgb(223, 223, 223)
+}
+
+
+#container {
+    perspective: 30px;
+}
+
+
+#inner {
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+/*============================================================
+   * EXTRAS
+   *============================================================
+*/
+
+.demo-img{
+    /* Photo by David Marcu on Unsplash */
+    border: solid white 15px;
+    background-image: url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1953&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+#container:hover .demo-overlay {
+    opacity: 1;
+}
+
+#container:hover {
+    cursor: pointer;
+}
+
+
+.demo-overlay{
+    width: 25em;
+    padding: 10em 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+
+
+.demo-overlay svg {
+    display: block;
+    margin: 0 auto;
+    fill: white;
+}
